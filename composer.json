@@ -1,0 +1,29 @@
+{
+    "name": "aengine/validator",
+    "description": "Data validator",
+    "keywords": [
+        "php",
+        "framework",
+        "AEngine",
+        "Filter",
+        "Validator"
+    ],
+    "homepage": "https://github.com/AEngine/validator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aleksey Ilyin",
+            "email": "alksily@icloud.com",
+            "homepage": "https://www.facebook.com/aleksey.ily",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AEngine\\Validator\\": "src/"
+        }
+    }
+}
