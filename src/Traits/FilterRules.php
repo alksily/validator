@@ -5,7 +5,7 @@ namespace AEngine\Validator\Traits;
 use AEngine\Validator\Lead as Lead;
 use AEngine\Validator\Check as Check;
 
-trait Filter
+trait FilterRules
 {
     // Russian date format (ГОСТ Р 6.30-2003 (п. 3.11))
     public static $DATE_RU = 'd.m.Y';
