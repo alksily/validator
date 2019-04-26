@@ -27,10 +27,8 @@ class Trim extends FilterRule
 
         if (is_scalar($value) || $value === null) {
             $value = trim($value, $this->chars);
-
-            return true;
         }
 
-        return false;
+        return true;
     }
 }
