@@ -1,8 +1,8 @@
 <?php
 
-namespace AEngine\Validator\Check;
+namespace Alksily\Validator\Check;
 
-use AEngine\Validator\FilterRule;
+use Alksily\Validator\FilterRule;
 
 class Url extends FilterRule
 {

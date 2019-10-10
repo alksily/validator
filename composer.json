@@ -1,14 +1,13 @@
 {
-    "name": "aengine/validator",
-    "description": "Data validator",
+    "name": "alksily/validator",
+    "description": "The Validator component provides tools to validate values.",
     "keywords": [
         "php",
         "framework",
-        "AEngine",
         "Filter",
         "Validator"
     ],
-    "homepage": "https://github.com/AEngine/validator",
+    "homepage": "https://github.com/alksily/validator",
     "license": "MIT",
     "authors": [
         {
@@ -23,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AEngine\\Validator\\": "src/"
+            "Alksily\\Validator\\": "src/"
         }
     }
 }

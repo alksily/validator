@@ -1,9 +1,9 @@
 <?php
 
-namespace AEngine\Validator\Traits;
+namespace Alksily\Validator\Traits;
 
-use AEngine\Validator\Lead as Lead;
-use AEngine\Validator\Check as Check;
+use Alksily\Validator\Lead as Lead;
+use Alksily\Validator\Check as Check;
 
 trait FilterRules
 {

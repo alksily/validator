@@ -1,6 +1,6 @@
-AEngine Validator
+Validator Component
 ====
-A convenient way to check the correctness of the data from the client.
+The Validator component provides tools to validate values.
 
 #### Requirements
 * PHP >= 7.0
@@ -8,12 +8,12 @@ A convenient way to check the correctness of the data from the client.
 #### Installation
 Run the following command in the root directory of your web project:
   
-> `composer require aengine/validator`
+> `composer require alksily/validator`
 
 #### Usage
 ```php
-use AEngine\Validator\Filter;
-use AEngine\Validator\Traits\FilterRules;
+use Alksily\Validator\Filter;
+use Alksily\Validator\Traits\FilterRules;
 
 class UserFilter extends Filter
 {
@@ -75,4 +75,4 @@ array(1) {
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 #### License
-The AEngine Validator is licensed under the MIT license. See [License File](LICENSE.md) for more information.
+The Alksily Validator is licensed under the MIT license. See [License File](LICENSE.md) for more information.

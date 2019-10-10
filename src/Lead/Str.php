@@ -1,8 +1,8 @@
 <?php
 
-namespace AEngine\Validator\Lead;
+namespace Alksily\Validator\Lead;
 
-use AEngine\Validator\FilterRule;
+use Alksily\Validator\FilterRule;
 
 class Str extends FilterRule
 {

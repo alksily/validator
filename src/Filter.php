@@ -1,6 +1,6 @@
 <?php
 
-namespace AEngine\Validator;
+namespace Alksily\Validator;
 
 use Closure;
 use RuntimeException;
