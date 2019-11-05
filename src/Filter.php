@@ -118,7 +118,7 @@ abstract class Filter
         if ($this->globalRule) {
             foreach (array_unique($this->globalList) as $field) {
                 foreach ($this->globalRule as $rule) {
-                    if ($rule['rule']($this->data, $field) !== true) {
+                    if (in_array($field, $this->data) && $rule['rule']($this->data, $field) !== true) {
                         $this->error[$field] = $rule['message'] ? $rule['message'] : false;
                         break;
                     }
