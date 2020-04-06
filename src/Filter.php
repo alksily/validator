@@ -7,12 +7,12 @@ use RuntimeException;
 
 abstract class Filter
 {
-    protected $data       = [];
-    protected $field      = null;
-    protected $rule       = [];
+    protected $data = [];
+    protected $field = null;
+    protected $rule = [];
     protected $globalRule = [];
     protected $globalList = [];
-    protected $error      = [];
+    protected $error = [];
 
     /**
      * Validator constructor
@@ -27,13 +27,18 @@ abstract class Filter
     /**
      * Select required field validation
      *
-     * @param string $field
+     * @param string        $field
+     * @param null|callable $callback
      *
      * @return self
      */
-    public function attr($field)
+    public function attr($field, callable $callback = null)
     {
         $this->globalList[] = $this->field = $field;
+
+        if (($callback === null) === false) {
+            $callback();
+        }
 
         return $this;
     }
@@ -41,16 +46,21 @@ abstract class Filter
     /**
      * Select not required (optional) field validation
      *
-     * @param string $field
+     * @param string        $field
+     * @param null|callable $callback
      *
      * @return self
      */
-    public function option($field)
+    public function option($field, callable $callback = null)
     {
         $this->field = null;
 
         if (!empty($this->data[$field])) {
             $this->globalList[] = $this->field = $field;
+
+            if (($callback === null) === false) {
+                $callback();
+            }
         }
 
         return $this;
@@ -62,14 +72,15 @@ abstract class Filter
      * @param FilterRule|Closure $rule
      * @param string             $message when error return this text
      *
-     * @return self
      * @throws RuntimeException
+     *
+     * @return self
      */
     public function addRule($rule, $message = '')
     {
         if ($this->field) {
             $this->rule[$this->field][] = [
-                'rule'    => $rule,
+                'rule' => $rule,
                 'message' => $message,
             ];
         }
@@ -88,7 +99,7 @@ abstract class Filter
     public function addGlobalRule($rule, $message = '')
     {
         $this->globalRule[] = [
-            'rule'    => $rule,
+            'rule' => $rule,
             'message' => $message,
         ];
 
