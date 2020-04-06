@@ -22,6 +22,6 @@ class Integer extends FilterRule
         }
 
         // otherwise, must be numeric, and must be same as when cast to int
-        return is_numeric($value) && $value == (int)$value;
+        return is_numeric($value) && $value == (int) $value;
     }
 }

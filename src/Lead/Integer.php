@@ -18,8 +18,8 @@ class Integer extends FilterRule
         $value = &$data[$field];
 
         if (is_numeric($value) || is_string($value)) {
-            $value = (float)$value;
-            $value = (int)$value;
+            $value = (float) $value;
+            $value = (int) $value;
 
             return true;
         }

@@ -18,7 +18,7 @@ class CreditCard extends FilterRule
         $value = $data[$field];
 
         // get the value; remove spaces, dashes, and dots
-        $value = str_replace([' ', '-', '.'], '', (string)$value);
+        $value = str_replace([' ', '-', '.'], '', (string) $value);
 
         // is it composed only of digits?
         if (!ctype_digit($value)) {
@@ -31,7 +31,7 @@ class CreditCard extends FilterRule
             [0, 2, 4, 6, 8, 1, 3, 5, 7, 9],
         ];
 
-        $sum  = 0;
+        $sum = 0;
         $flip = 0;
 
         for ($i = strlen($value) - 1; $i >= 0; $i--) {

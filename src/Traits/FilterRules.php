@@ -2,8 +2,8 @@
 
 namespace Alksily\Validator\Traits;
 
-use Alksily\Validator\Lead as Lead;
 use Alksily\Validator\Check as Check;
+use Alksily\Validator\Lead as Lead;
 
 trait FilterRules
 {

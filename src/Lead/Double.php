@@ -26,7 +26,7 @@ class Double extends FilterRule
         $value = &$data[$field];
 
         if (is_numeric($value) || is_string($value)) {
-            $value = round((double)$value, $this->precision);
+            $value = round((double) $value, $this->precision);
 
             return true;
         }

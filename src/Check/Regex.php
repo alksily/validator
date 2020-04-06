@@ -29,6 +29,6 @@ class Regex extends FilterRule
             return false;
         }
 
-        return (bool)preg_match($this->expr, $value);
+        return (bool) preg_match($this->expr, $value);
     }
 }

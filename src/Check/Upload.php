@@ -23,7 +23,7 @@ class Upload extends FilterRule
             'tmp_name' => '',
             'type' => '',
         ];
-        $value = array_merge($default, (array)$data[$field] ?? []);
+        $value = array_merge($default, (array) $data[$field] ?? []);
 
         // remove unexpected keys
         $expect = array_keys($default);

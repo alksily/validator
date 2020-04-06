@@ -22,6 +22,6 @@ class Double extends FilterRule
         }
 
         // otherwise, must be numeric, and must be same as when cast to float
-        return is_numeric($value) && $value == (float)$value;
+        return is_numeric($value) && $value == (float) $value;
     }
 }
